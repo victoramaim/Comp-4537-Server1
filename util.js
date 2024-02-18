@@ -5,17 +5,20 @@ const definition = document.getElementById('definitionInput').value;
 
 function storeDefinition() {
     xhttp.open("POST", endpoint, true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ word, definition }));
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log("Definition stored successfully");
+            alert("Definition stored successfully!");
+        } else {
+            alert("Error: " + this.statusText);
         }
     }
 }
 
-async function searchDefinition() {
-    xhttp.open("GET", "http://localhost:3000/api/definitions/?word=" 
-    + document.getElementById('searchInput').value, true);
+function searchDefinition() {
+    const url = endpoint + "?word=" + document.getElementById('searchInput').value;
+    xhttp.open("GET", url, true);
     xhttp.send();
 
     xhttp.onreadystatechange = function() {
@@ -23,7 +26,7 @@ async function searchDefinition() {
             document.getElementById('searchResult').textContent = 
             `Word: ${JSON.parse(this.responseText).word}, Definition: ${JSON.parse(this.responseText).definition}`;
         } else {
-            document.getElementById('searchResult').textContent = `Error: ${this.statusText}`;
+            alert("Error: " + this.statusText);
         }
     };
 }

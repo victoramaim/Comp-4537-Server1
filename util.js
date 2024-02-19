@@ -1,5 +1,5 @@
 const xhttp = new XMLHttpRequest();
-const endpoint = "https://comp-4537-server2.vercel.app/";
+const endpoint = "https://4537-lab-04-server-2.vercel.app/";
 const word = document.getElementById('wordInput').value;
 const definition = document.getElementById('definitionInput').value;
 

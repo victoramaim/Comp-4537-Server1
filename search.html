@@ -7,12 +7,14 @@
 </head>
 <body>
     <h1>Search Definition</h1>
-    <label for="searchInput">Search Word:</label>
-    <input type="text" id="searchInput" name="searchInput" required>
-    <button onclick="searchDefinition()">Search</button>
+    <form id="SearchForm">
+        <label>Search Word:</label>
+        <input type="text" id="searchInput" name="searchInput" required>
+        <button type="submit">Search</button>
+    </form>
     <p id="searchResult"></p>
     <a href="./">Store Page</a>
 
-    <script src="/util.js"></script>
+    <script src="/search.js"></script>
 </body>
 </html>

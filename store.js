@@ -10,7 +10,7 @@ document.getElementById("storeForm").addEventListener("submit", (e) => {
     }
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://monkfish-app-q5kql.ondigitalocean.app/api/definitions/", true);
+    xhr.open("POST", "https://plankton-app-23o4e.ondigitalocean.app/api/definitions/", true);
     xhr.setRequestHeader("Content-Type", "text/plain");
     xhr.send(JSON.stringify({ word, definition }));
 

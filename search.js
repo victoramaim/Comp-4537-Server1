@@ -24,7 +24,7 @@ document.getElementById("SearchForm").addEventListener("submit", function (e) {
             if (xhr.status === 200 && isJsonString(xhr.responseText)) {
                 const response = JSON.parse(xhr.responseText);
                 if (response && response.definition) {
-                    document.getElementById('response').textContent = 
+                    document.getElementById('feedback').textContent = 
                         `Word: ${word}, Definition: ${response.definition}`;
                 } else {
                     document.getElementById('response').textContent = messages._404;

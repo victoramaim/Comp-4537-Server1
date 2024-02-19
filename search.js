@@ -1,3 +1,5 @@
+// ChatGPT was used here to create this fucntions that checks whether 
+// a given string is a valid JSON string or not
 function isJsonString(str) {
     try {
         JSON.parse(str);
@@ -19,6 +21,9 @@ document.getElementById("SearchForm").addEventListener("submit", function (e) {
     xhr.onerror = () => {
         alert(messages.error404);
     };
+
+    // ChatGPT was used here to create this callback function that handles the state
+    // change of the XMLHttpRequest object
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200 && isJsonString(xhr.responseText)) {

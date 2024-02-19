@@ -7,7 +7,7 @@ function isJsonString(str) {
     return true;
 }
 
-document.getElementById("searchForm").addEventListener("submit", function (e) {
+document.getElementById("SearchForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const word = document.getElementById("searchInput").value;

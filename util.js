@@ -36,7 +36,7 @@ document.getElementById("SearchForm").addEventListener("submit", function (e) {
     const word = document.getElementById("searchInput").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", `https://monkfish-app-q5kql.ondigitalocean.app/api/definitions/?word=${word}`, true);
+    xhr.open("GET", `https://plankton-app-23o4e.ondigitalocean.app/api/definitions/?word=${word}`, true);
     xhr.send();
 
     xhr.onerror = () => {

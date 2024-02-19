@@ -27,7 +27,7 @@ document.getElementById("SearchForm").addEventListener("submit", function (e) {
                     document.getElementById('feedback').textContent = 
                         `Word: ${word}, Definition: ${response.definition}`;
                 } else {
-                    document.getElementById('response').textContent = messages._404;
+                    document.getElementById('feedback').textContent = messages._404;
                 }
             } else {
                 alert(messages._404);

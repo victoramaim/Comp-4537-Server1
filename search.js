@@ -13,7 +13,7 @@ document.getElementById("searchForm").addEventListener("submit", function (e) {
     const word = document.getElementById("searchInput").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", `https://4537-lab-04-server-2.vercel.app/api/definitions/?word=${word}`, true);
+    xhr.open("GET", `https://monkfish-app-q5kql.ondigitalocean.app/api/definitions/?word=${word}`, true);
     xhr.send();
 
     xhr.onerror = () => {

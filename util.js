@@ -1,9 +1,9 @@
 const xhttp = new XMLHttpRequest();
 const endpoint = "https://4537-lab-04-server-2.vercel.app/";
-const word = document.getElementById('wordInput').value;
-const definition = document.getElementById('definitionInput').value;
 
 function storeDefinition() {
+    const word = document.getElementById('wordInput').value;
+    const definition = document.getElementById('definitionInput').value;
     xhttp.open("POST", endpoint, true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ word, definition }));
